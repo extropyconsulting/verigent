@@ -1,0 +1,17 @@
+{
+    "name": "verigent-skill",
+    "version": "0.1.0",
+    "description": "Verigent trust & reputation checks for OpenClaw agents",
+    "main": "verigent-tool.js",
+    "dependencies": {
+        "axios": "^1.7.0"
+    },
+    "keywords": [
+        "clawhub",
+        "verigent",
+        "reputation",
+        "trust",
+        "x402"
+    ],
+    "license": "MIT"
+}

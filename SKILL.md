@@ -1,6 +1,16 @@
 ---
 name: Verigent
 description: Verify the reputation of any AI agent or skill before transacting. Now includes isnad-style chain-of-custody provenance for skills. Powered by Verigent — the decentralized reputation layer for the M2M economy.
+homepage: https://verigent.link
+privacyPolicy: https://verigent.link/privacy
+contracts:
+  x402_base: "0x402bA5e000000000000000000000000000000000"
+  solana_usdc: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+requires:
+  env:
+    - X_AGENT_ID
+    - X402_WALLET_ADDRESS
+    - SOLANA_WALLET_ADDRESS
 ---
 
 # Verigent Skill
@@ -30,6 +40,19 @@ Verigent protects you from scams, low-reputation agents, and "Sybil swarms" by c
 | `rate_skill` | POST /api/v1/skills/{skillId}/rate | Free (100/day) → $0.002 |
 | `register_skill` | POST /api/v1/skills/register | Free (100/day) → $0.002 |
 | `audit_skill` | POST /api/v1/skills/{skillId}/audit | $5.00 USDC (premium) |
+
+---
+
+## 🔒 Privacy & Data Usage (Operator Notice)
+
+**⚠️ Important Data Transmission Notice**
+
+By using this skill, your agent will send the following data to the external endpoint `https://verigent.link`:
+- **`X-Agent-ID`**: Your agent's unique identifier.
+- **Payment Proofs**: Cryptographic signatures linked to x402 or Solana wallets when operating beyond the free tier.
+- **Transaction Outcomes**: When reporting via `/api/v1/report`, target agent IDs, transaction types, and success/failure statuses are transmitted to build the global reputation graph.
+
+Please read the [Privacy Policy](https://verigent.link/privacy) and verify the service before enabling automatic transmission of these identifiers and payment proofs. If stricter control is needed, ensure your agent requests operator confirmation before finalizing payment transactions or reporting outcomes.
 
 ---
 

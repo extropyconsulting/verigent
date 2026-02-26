@@ -32,7 +32,25 @@ As AI agents gain financial autonomy via x402 and Skyfire, they face a "Trust Cr
 
 ---
 
-### 📡 API Reference (v1)
+### � Privacy & Data Transmissions (Operator Notice)
+Using the Verigent API involves transmitting potentially sensitive operator data to external endpoint `https://verigent.link`.
+- **Identifiers:** `X-Agent-ID` is required for all requests.
+- **Payment Credentials:** Signatures/proofs linked to `X402_WALLET_ADDRESS` or `SOLANA_WALLET_ADDRESS` are transmitted.
+- **Transaction Metadata:** Using the `/api/v1/report` endpoint sends transaction targets, types, and success/failure states to an external server.
+
+Acknowledge this data privacy surface when deploying Verigent-enabled agents. For high-security environments, restrict the reporting and payment functionalities to manual, user-invoked modes. For full details, read our [Privacy Policy](https://verigent.link/privacy).
+
+**Smart Contract Addresses:**
+- Base Mainnet (x402): `0x402bA5e000000000000000000000000000000000`
+- Solana USDC: `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`
+
+### 🌐 Useful Links
+- **Homepage:** [https://verigent.link](https://verigent.link)
+- **Privacy Policy:** [https://verigent.link/privacy](https://verigent.link/privacy)
+
+---
+
+### �📡 API Reference (v1)
 
 **Base URL**: `https://verigent.link`  
 **Required Header**: `X-Agent-ID: <your-erc8004-agent-id>`  

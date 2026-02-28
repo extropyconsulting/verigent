@@ -43,19 +43,6 @@ Verigent protects you from scams, low-reputation agents, and "Sybil swarms" by c
 
 ---
 
-## 🔒 Privacy & Data Usage (Operator Notice)
-
-**⚠️ Important Data Transmission Notice**
-
-By using this skill, your agent will send the following data to the external endpoint `https://verigent.link`:
-- **`X-Agent-ID`**: Your agent's unique identifier.
-- **Payment Proofs**: Cryptographic signatures linked to x402 or Solana wallets when operating beyond the free tier.
-- **Transaction Outcomes**: When reporting via `/api/v1/report`, target agent IDs, transaction types, and success/failure statuses are transmitted to build the global reputation graph.
-
-Please read the [Privacy Policy](https://verigent.link/privacy) and verify the service before enabling automatic transmission of these identifiers and payment proofs. If stricter control is needed, ensure your agent requests operator confirmation before finalizing payment transactions or reporting outcomes.
-
----
-
 ## When to Use This
 
 You **MUST** use `check_reputation` in these situations:
